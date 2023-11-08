@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Админ</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">    
+</head>
+
+<body>
+    <form method="post" action="{% url 'create_user' %}">
+        {% csrf_token %}
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login" required><br><br>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Создать пользователя">
+    </form>
+</body>
+</html>
