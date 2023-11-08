@@ -38,4 +38,4 @@ def login_view(request):
         else:
             # Ошибка аутентификации, покажите сообщение об ошибке
             messages.error(request, 'Неправильный логин или пароль.')
-    return render(request, 'login.html')
+    return render(request, 'authentication/login.html')

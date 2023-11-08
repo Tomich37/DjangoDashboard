@@ -11,7 +11,7 @@ logger = SetLogs().logger
 
 @login_required
 def admin_page(request):
-    return render(request, 'admin_page.html')  # Corrected render function
+    return render(request, 'admin_page.html')
 
 @login_required
 @csrf_exempt    
